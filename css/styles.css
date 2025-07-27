@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+@layer base {
+    h1 {
+        @apply text-3xl font-bold text-gray-800;
+    }
+}
+
+@layer components {
+    /* Top navigation bar */
+    .top-nav {
+        @apply fixed top-0 left-0 right-0 h-16 m-2 bg-white ring-1 ring-gray-300 flex items-center justify-between px-6 z-20;
+    }
+    
+    /* Left sidebar navigation */
+    .side-nav {
+        @apply fixed left-0 top-18 h-screen w-64 m-2 bg-white ring-1 ring-gray-300 flex flex-col overflow-y-auto z-10;
+    }
+    .side-nav ul {
+        @apply flex flex-col;
+    }
+    .side-nav a {
+        @apply font-semibold block px-8 py-4 items-center hover:bg-neutral-200 hover:text-violet-400 text-neutral-800;
+    }
+    
+    /* Main content area that accounts for both top nav and sidebar */
+    main {
+        @apply ml-64 mt-16 min-h-screen overflow-y-auto;
+    }
+}
