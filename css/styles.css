@@ -2,22 +2,25 @@
 @import "tailwindcss";
 
 @theme {
-    --font-playpen: 'Playpen Sans Hebrew', sans-serif;
+    --color-jet: #39373C;
+    --color-olivia: #EBC6BE;
+    --color-platinum: #E2E3DD;
+    --color-ghost: #EBEAEF;
 }
 
 @layer base {
     h1 {
-        @apply text-5xl font-semibold text-gray-800;
+        @apply text-5xl font-semibold text-jet;
     }
     h2 {
-        @apply text-4xl font-semibold text-gray-800;
+        @apply text-4xl font-semibold text-jet;
     }
 }
 
 @layer components {
     /* Top navigation bar */
     nav {
-        @apply fixed top-0 left-0 right-0 h-16 z-20 bg-neutral-200 flex items-center px-4;
+        @apply fixed top-0 left-0 right-0 h-16 z-20 ring ring-jet flex items-center px-4;
     }
 
     nav .content-wrapper {
