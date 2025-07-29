@@ -10,12 +10,12 @@
 @layer components {
     /* Top navigation bar */
     .top-nav {
-        @apply fixed top-0 left-0 right-0 h-16 m-2 bg-white ring-1 ring-gray-300 flex items-center justify-between px-6 z-20;
+        @apply fixed top-0 left-0 right-0 h-16 bg-white ring-1 flex items-center justify-between px-6 z-20;
     }
     
     /* Left sidebar navigation */
     .side-nav {
-        @apply fixed left-0 top-18 h-screen w-64 m-2 bg-white ring-1 ring-gray-300 flex flex-col overflow-y-auto z-10;
+        @apply fixed left-0 top-16 h-screen w-64 bg-white ring-1 flex flex-col overflow-y-auto z-10;
     }
     .side-nav ul {
         @apply flex flex-col;
