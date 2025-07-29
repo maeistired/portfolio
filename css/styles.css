@@ -1,31 +1,53 @@
 /* @tailwind */
 @import "tailwindcss";
 
+@theme {
+    --font-playpen: 'Playpen Sans Hebrew', sans-serif;
+}
+
 @layer base {
     h1 {
-        @apply text-3xl font-bold text-gray-800;
+        @apply text-5xl font-semibold text-gray-800;
+    }
+    h2 {
+        @apply text-4xl font-semibold text-gray-800;
     }
 }
 
 @layer components {
     /* Top navigation bar */
-    .top-nav {
-        @apply fixed top-0 left-0 right-0 h-16 bg-white ring-1 flex items-center justify-between px-6 z-20;
+    nav {
+        @apply fixed top-0 left-0 right-0 h-16 z-20 bg-neutral-200 flex items-center px-4;
+    }
+
+    nav .content-wrapper {
+        @apply flex items-center justify-between w-full;
+    }
+
+    nav .logo a {
+        @apply font-bold text-lg text-neutral-800 hover:text-violet-400;
+    }
+
+    nav ul {
+        @apply flex items-center space-x-6 list-none m-0 p-0;
+    }
+
+    nav a {
+        @apply font-semibold px-4 py-2 hover:text-violet-400 text-neutral-800;
     }
     
-    /* Left sidebar navigation */
-    .side-nav {
-        @apply fixed left-0 top-16 h-screen w-64 bg-white ring-1 flex flex-col overflow-y-auto z-10;
-    }
-    .side-nav ul {
-        @apply flex flex-col;
-    }
-    .side-nav a {
-        @apply font-semibold block px-8 py-4 items-center hover:bg-neutral-200 hover:text-violet-400 text-neutral-800;
-    }
-    
-    /* Main content area that accounts for both top nav and sidebar */
+    /* Main content area that only accounts for top nav */
     main {
-        @apply ml-64 mt-16 min-h-screen overflow-y-auto;
+        @apply mt-16 min-h-screen overflow-y-auto;
+    }
+}
+
+@layer utilities {
+    /* Custom utility classes can be added here */
+    .content-wrapper {
+        @apply max-w-[1152px] mx-auto;
+    }
+    .center {
+        @apply flex items-center justify-center;
     }
 }

@@ -1,35 +1,40 @@
 <!doctype html>
 <html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="./css/output.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./css/output.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playpen+Sans+Hebrew:wght@100..800&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Top Navigation Bar -->
-    <nav class="top-nav">
-        <div class="flex items-center">
-            <a href="#logo" class="text-xl font-bold text-gray-800 hover:text-violet-300">mae</a>
+    <nav>
+        <div class="content-wrapper">
+            <div class="logo">
+                <a href="#home">Logo</a>
+            </div> 
+            <ul>
+                <li><a href="#projects">projects</a></li>
+                <li><a href="#skills">skills</a></li>
+                <li><a href="#about">about</a></li>
+                <li><a href="#contact">contact</a></li>
+            </ul>
         </div>
-        <div class="flex items-center space-x-4">
-            <button class="text-gray-600 hover:text-gray-800">Search</button>
-            <button class="text-gray-600 hover:text-gray-800">Profile</button>
-        </div>
-    </nav>
-
-    <!-- Left Sidebar -->
-    <nav class="side-nav">
-        <ul>
-            <li><a href="#home">home</a></li>  
-            <li><a href="#about">about</a></li>
-            <li><a href="#services">services</a></li>
-            <li><a href="#contact">contact</a></li>
-        </ul>
     </nav>
 
     <main>
-        <section id="home">
-            <div class="p-8">
+        <section id="home" class="content-wrapper">
+            <div class="flex gap-x-10 center">
+                <div class="home-hero-heading">
+                    <h1>hi, i'm mae!</h1>
+                    <img src="img/keeb.svg" alt="3D Keyboard Image">
+                </div>
+            </div>
+        </section>
+        <section id="test" class="content-wrapper">
+            <div class="py-8">
                 <h1>Header</h1>
                 <p class="mb-4">This is the main content area that will be scrollable.</p>
                 <div class="space-y-4">
