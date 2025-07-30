@@ -12,10 +12,10 @@
 
 @layer base {
     h1 {
-        @apply text-4xl font-roboto-mono font-semibold text-jet;
+        @apply text-4xl font-roboto-mono font-medium text-jet;
     }
     h2 {
-        @apply text-3xl font-roboto-mono font-semibold text-jet;
+        @apply text-3xl font-roboto-mono font-medium text-jet;
     }
     a {
         @apply font-roboto-mono text-jet;
@@ -25,24 +25,40 @@
 @layer components {
     /* Top navigation bar */
     nav {
-        @apply fixed top-0 left-0 right-0 h-16 z-20 ring ring-jet px-4 flex items-center justify-between;
+        @apply bg-ghost fixed top-0 left-0 right-0 h-16 z-20 ring-1 ring-gray-300 px-4 flex items-center;
+    }
+
+    /* Left section - buttons container */
+    nav > div:first-child {
+        @apply flex-1 flex justify-start items-center space-x-2;
+    }
+
+    /* Individual buttons - remove flex-1 and flex-row */
+    nav button {
+        @apply px-3 py-2 hover:text-violet-400 text-neutral-800;
+    }
+
+    /* Center section - logo (this will stay perfectly centered) */
+    nav .logo {
+        @apply flex-1 flex justify-center items-center;
+    }
+
+    /* Right section - navigation links */
+    nav ul {
+        @apply flex-1 flex justify-end items-center space-x-4 list-none m-0 p-0;
     }
 
     nav .logo a {
-        @apply font-bold text-lg text-neutral-800 hover:text-violet-400;
+        @apply text-2xl font-roboto-mono hover:text-violet-400 text-jet;
     }
 
-    nav ul {
-        @apply flex items-center space-x-6 list-none m-0 p-0;
-    }
-
-    nav a {
-        @apply  px-2 py-2 hover:text-violet-400 text-neutral-800;
+    nav ul a {
+        @apply font-roboto-mono hover:text-violet-400 text-jet px-2 py-2;
     }
     
-    /* Main content area that only accounts for top nav */
+    /* Main content area */
     main {
-        @apply mt-16 min-h-screen overflow-y-auto;
+        @apply bg-ghost mt-16 min-h-screen overflow-y-auto;
     }
 }
 
