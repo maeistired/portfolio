@@ -6,25 +6,26 @@
     --color-olivia: #EBC6BE;
     --color-platinum: #E2E3DD;
     --color-ghost: #EBEAEF;
+
+    --font-roboto-mono: 'Roboto Mono', monospace;
 }
 
 @layer base {
     h1 {
-        @apply text-5xl font-semibold text-jet;
+        @apply text-4xl font-roboto-mono font-semibold text-jet;
     }
     h2 {
-        @apply text-4xl font-semibold text-jet;
+        @apply text-3xl font-roboto-mono font-semibold text-jet;
+    }
+    a {
+        @apply font-roboto-mono text-jet;
     }
 }
 
 @layer components {
     /* Top navigation bar */
     nav {
-        @apply fixed top-0 left-0 right-0 h-16 z-20 ring ring-jet flex items-center px-4;
-    }
-
-    nav .content-wrapper {
-        @apply flex items-center justify-between w-full;
+        @apply fixed top-0 left-0 right-0 h-16 z-20 ring ring-jet px-4 flex items-center justify-between;
     }
 
     nav .logo a {
@@ -36,7 +37,7 @@
     }
 
     nav a {
-        @apply font-semibold px-4 py-2 hover:text-violet-400 text-neutral-800;
+        @apply  px-2 py-2 hover:text-violet-400 text-neutral-800;
     }
     
     /* Main content area that only accounts for top nav */
