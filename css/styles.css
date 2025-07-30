@@ -17,12 +17,20 @@
     h2 {
         @apply text-3xl font-roboto-mono font-medium text-jet;
     }
+    p {
+        @apply text-lg font-roboto-mono text-jet;
+    }
     a {
         @apply font-roboto-mono text-jet;
     }
 }
 
 @layer components {
+    /* Body */
+    body {
+        @apply bg-ghost;
+    }
+
     /* Top navigation bar */
     nav {
         @apply bg-ghost fixed top-0 left-0 right-0 h-16 z-20 ring-1 ring-gray-300 px-4 flex items-center;
@@ -58,7 +66,7 @@
     
     /* Main content area */
     main {
-        @apply bg-ghost mt-16 min-h-screen overflow-y-auto;
+        @apply min-h-screen overflow-y-auto;
     }
 }
 
@@ -66,8 +74,5 @@
     /* Custom utility classes can be added here */
     .content-wrapper {
         @apply max-w-[1152px] mx-auto;
-    }
-    .center {
-        @apply flex items-center justify-center;
     }
 }
