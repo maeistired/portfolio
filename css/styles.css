@@ -7,33 +7,46 @@
     --color-platinum: #E2E3DD;
     --color-ghost: #EBEAEF;
 
-    --font-roboto-mono: 'Roboto Mono', monospace;
+    /* Define colors for Tailwind utilities */
+    --color-primary: #39373C;
+    --color-secondary: #EBC6BE;
+    --color-accent: #E2E3DD;
+    --color-neutral: #EBEAEF;
+
+    /* Define font families */
+    --font-family-mono: 'Roboto Mono', monospace;
 }
 
 @layer base {
     h1 {
-        @apply text-4xl font-roboto-mono font-medium text-jet;
+        @apply text-4xl font-mono font-medium text-primary;
     }
     h2 {
-        @apply text-3xl font-roboto-mono font-medium text-jet;
+        @apply text-3xl font-mono font-medium text-primary;
+    }
+    h4 {
+        @apply text-xl font-mono font-medium text-primary;
     }
     p {
-        @apply text-lg font-roboto-mono text-jet;
+        @apply text-lg font-mono text-primary;
     }
     a {
-        @apply font-roboto-mono text-jet;
+        @apply font-mono text-primary;
+    }
+    li {
+        @apply font-mono text-primary;
     }
 }
 
 @layer components {
     /* Body */
     body {
-        @apply bg-ghost;
+        @apply bg-neutral;
     }
 
     /* Top navigation bar */
     nav {
-        @apply bg-ghost fixed top-0 left-0 right-0 h-16 z-20 ring-1 ring-gray-300 px-4 flex items-center;
+        @apply bg-neutral fixed top-0 left-0 right-0 h-16 z-20 ring-1 ring-primary px-4 flex items-center;
     }
 
     /* Left section - buttons container */
@@ -57,16 +70,21 @@
     }
 
     nav .logo a {
-        @apply text-2xl font-roboto-mono hover:text-violet-400 text-jet;
+        @apply text-2xl font-mono hover:text-violet-400 text-primary;
     }
 
     nav ul a {
-        @apply font-roboto-mono hover:text-violet-400 text-jet px-2 py-2;
+        @apply font-mono hover:text-violet-400 text-primary px-2 py-2;
     }
     
     /* Main content area */
     main {
         @apply min-h-screen overflow-y-auto;
+    }
+
+    /* Skills section */
+    #skills ul {
+        @apply list-disc;
     }
 }
 
