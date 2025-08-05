@@ -93,11 +93,48 @@
         transition: background-color 0.3s ease;
     }
 
+    /* Universal border classes for dark mode compatibility */
+    .border-t {
+        border-top-color: var(--current-primary) !important;
+        transition: border-color 0.3s ease;
+    }
+
+    .border-b {
+        border-bottom-color: var(--current-primary) !important;
+        transition: border-color 0.3s ease;
+    }
+
+    .border-l {
+        border-left-color: var(--current-primary) !important;
+        transition: border-color 0.3s ease;
+    }
+
+    .border-r {
+        border-right-color: var(--current-primary) !important;
+        transition: border-color 0.3s ease;
+    }
+
+    .border {
+        border-color: var(--current-primary) !important;
+        transition: border-color 0.3s ease;
+    }
+
+    /* Ring classes for dark mode compatibility */
+    .ring-1 {
+        ring-color: var(--current-primary) !important;
+        transition: ring-color 0.3s ease;
+    }
+
+    .ring-2 {
+        ring-color: var(--current-primary) !important;
+        transition: ring-color 0.3s ease;
+    }
+    
+
     /* Top navigation bar */
     nav {
-        @apply fixed top-0 left-0 right-0 h-16 z-20 ring-1 px-4 flex items-center;
+        @apply fixed top-0 left-0 right-0 h-16 z-20 border-b px-4 flex items-center;
         background-color: var(--current-neutral);
-        border-color: var(--current-primary);
         transition: background-color 0.3s ease, border-color 0.3s ease;
     }
 
