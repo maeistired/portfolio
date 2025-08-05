@@ -37,72 +37,254 @@
                     <img src="img/e_key_v6-03.svg" alt="E Keycap" class="w-[150px] h-[150px] flex-shrink-0">
                 </div>
                 <p class="text-center mt-2 max-w-sm mx-auto">
-                    I specialize in graphic design and front end develment that balances aesthetics with usability.
+                    I specialize in graphic design and full stack development that balances aesthetics with usability.
                 </p>
             </div>
         </div>
     </section>
 
     <!-- About Me Section -->
-    <section id="about" class="py-30 border-t">
-        <div class="content-wrapper text-center mx-auto">
-            <h2>about me</h2>
-            <p class="mt-2 max-w-md mx-auto">
-                nothing beats a jet2 holiday and right now you can save £50 per person. that's £200 off for a family of 4. we've got millions of free child place holidays available with 22kg of baggage included. book now with jet2holidays. package holidays you can trust!
-            </p>
+    <section id="about" class="py-15 border-t">
+        <div class="content-wrapper">
+            <div class="grid grid-cols-2 gap-16 items-center">
+                <!-- Left side - Image -->
+                <div class="flex justify-center">
+                    <img src="img/your-image.jpg" alt="Mae Cacao" class="w-80 h-80 object-cover rounded-lg">
+                </div>
+                
+                <!-- Right side - Text content -->
+                <div class="space-y-6">
+                    <h2>about me</h2>
+                    <p class="">
+                        I'm a 21-year-old Graphic Designer and Full Stack Developer based in Toronto, currently studying Graphic Communications Management with a Computer Science minor at Toronto Metropolitan University.
+                    </p>
+                    <p class="">
+                        With a background that bridges design and development, I specialize in creating cohesive digital experiences—from UI/UX and branding to full-stack web applications. My work reflects a balance of creativity and technical precision, informed by both my academic training and hands-on experience.
+                    </p>
+                    <p class="">
+                        Outside of my projects, I'm passionate about rock climbing, computer hardware, and photography—interests that fuel my curiosity, attention to detail, and problem-solving mindset.
+                    </p>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="py-30 border-t">
-        <div class="content-wrapper">
-            <h2>skills</h2>
-                <div class="grid grid-cols-5">
-                    <div class="col-start-2">
-                        <h4>tools</h4>
-                            <ul>
-                                <li>adobe creative suite</li>
-                                <li>figma</li>
-                                <li>canva</li>
-                            </ul>
-                    </div>
-                    <div class="col-start-3">
-                        <h4>development</h4>
-                            <ul>
-                                <li>html/css</li>
-                                <li>tailwind css</li>
-                                <li>javascript</li>
-                                <li>python</li>
-                            </ul>
-                    </div>
-                    <div class="col-start-4">
-                        <h4>languages</h4>
-                            <ul>
-                                <li>english</li>
-                                <li>french</li>
-                                <li>tagalog</li>
-                            </ul>
-                    </div>
+    <section id="skills" class="py-15 border-t">
+        <div class="content-wrapper text-center">
+            <h2 class="mb-8">skills</h2>
+            <div class="grid grid-cols-3 gap-6 max-w-3xl mx-auto">
+                <div class="text-left">
+                    <h4 class="mb-4 flex justify-center">tools</h4>
+                    <ul class="space-y-2 flex flex-col items-center">
+                        <li>illustrator</li>
+                        <li>photoshop</li>
+                        <li>indesign</li>
+                        <li>figma</li>
+                        <li>canva</li>
+                    </ul>
                 </div>
+                <div class="text-left">
+                    <h4 class="mb-4 flex justify-center">development</h4>
+                    <ul class="space-y-2 flex flex-col items-center">
+                        <li>html/css</li>
+                        <li>tailwind css</li>
+                        <li>javascript</li>
+                        <li>python</li>
+                    </ul>
+                </div>
+                <div class="text-left">
+                    <h4 class="mb-4 flex justify-center">languages</h4>
+                    <ul class="space-y-2 flex flex-col items-center">
+                        <li>english</li>
+                        <li>french</li>
+                        <li>tagalog</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="py-30 border-t">
-        <h2>projects</h2>
-        <p>aaaaaaaaaaaaa</p>
+    <section id="projects" class="py-15 border-t">
+        <div class="content-wrapper">
+            <h2 class="text-center mb-12">my projects</h2>
+            <!-- Carousel Container -->
+            <div class="relative max-w-4xl mx-auto">
+                <!-- Carousel Wrapper -->
+                <div id="carousel" class="overflow-hidden rounded-lg">
+                    <div id="carousel-track" class="flex transition-transform duration-300 ease-in-out">
+                        
+                        <!-- Project 1 -->
+                        <div class="w-full flex-shrink-0">
+                            <div class="grid grid-cols-2 gap-8 items-stretch">
+                                <div class="flex flex-col h-full">
+                                    <h3 class="mb-4 mt-2">MTA Website Redesign</h3>
+                                    <p class="flex-grow">
+                                        Redesigned the Management Technologies Association (MTA) website using Figma, focusing on a clean, modern UI that highlights student events, workshops, and team initiatives.
+                                    </p>
+                                    <div class="flex space-x-4 mt-auto">
+                                        <a href="#" class="btn-primary">view live</a>
+                                        <a href="#" class="btn-secondary">view code</a>
+                                    </div>
+                                </div>
+                                <div class="flex justify-center">
+                                    <iframe src="img/MTA_Pages.pdf" alt="Project 1" class="w-full max-w-md h-96 rounded-lg" style="pointer-events: auto;"></iframe>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 2 -->
+                        <div class="w-full flex-shrink-0">
+                            <div class="grid grid-cols-2 gap-8 items-stretch">
+                                <div class="flex flex-col h-full">
+                                    <h4 class="mb-4">project title 2</h4>
+                                    <p class="flex-grow">Brief description of your second project. Explain what it does, what technologies you used, and what problem it solves.</p>
+                                    <div class="flex space-x-4 mt-auto">
+                                        <a href="#" class="btn-primary">view live</a>
+                                        <a href="#" class="btn-secondary">view code</a>
+                                    </div>
+                                </div>
+                                <div class="flex justify-center">
+                                    <img src="img/project2.jpg" alt="Project 2" class="w-full max-w-md rounded-lg">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 3 -->
+                        <div class="w-full flex-shrink-0">
+                            <div class="grid grid-cols-2 gap-8 items-stretch">
+                                <div class="flex flex-col h-full">
+                                    <h4 class="mb-4">project title 3</h4>
+                                    <p class="flex-grow">Brief description of your third project. Explain what it does, what technologies you used, and what problem it solves.</p>
+                                    <div class="flex space-x-4 mt-auto">
+                                        <a href="#" class="btn-primary">view live</a>
+                                        <a href="#" class="btn-secondary">view code</a>
+                                    </div>
+                                </div>
+                                <div class="flex justify-center">
+                                    <img src="img/project3.jpg" alt="Project 3" class="w-full max-w-md rounded-lg">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Navigation Controls (Arrows + Dots) -->
+                <div class="flex justify-center items-center mt-8 space-x-6">
+                    <!-- Previous Arrow -->
+                    <button id="prev-btn" class="carousel-btn">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                        </svg>
+                    </button>
+
+                    <!-- Dots Indicator -->
+                    <div class="flex space-x-2">
+                        <button class="carousel-dot active" data-slide="0"></button>
+                        <button class="carousel-dot" data-slide="1"></button>
+                        <button class="carousel-dot" data-slide="2"></button>
+                    </div>
+
+                    <!-- Next Arrow -->
+                    <button id="next-btn" class="carousel-btn">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-30 border-t">  
-        <h2>contact</h2>
-        <p>aaaaaaaaaaaaa</p>
+    <section id="contact" class="py-15 border-t">
+        <div class="content-wrapper">
+            <h2 class="text-center mb-12">contact me</h2>
+            <div class="max-w-2xl mx-auto text-center space-y-8">
+                <!-- Contact Methods -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- LinkedIn -->
+                    <div class="space-y-3">
+                        <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center mx-auto">
+                            <svg class="w-6 h-6 text-neutral" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </div>
+                        <h4>linkedin</h4>
+                        <a href="https://linkedin.com/in/jerimaecacao" target="_blank" class="text-primary hover:text-secondary transition-colors">
+                            /in/jerimaecacao
+                        </a>
+                    </div>
+
+                    <!-- GitHub -->
+                    <div class="space-y-3">
+                        <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center mx-auto">
+                            <svg class="w-6 h-6 text-neutral" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                        </div>
+                        <h4>github</h4>
+                        <a href="https://github.com/maeistired" target="_blank" class="text-primary hover:text-secondary transition-colors">
+                            /maeistired
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 </main>
 
     <!-- Footer -->
-    <footer class="content-wrapper">
+    <footer class="m-5">
         <p>© 2023 mae cacao. All rights reserved.</p>
     </footer>
+
+    <!-- Carousel JavaScript -->
+    <script>
+        let currentSlide = 0;
+        const totalSlides = 3;
+        const carouselTrack = document.getElementById('carousel-track');
+        const dots = document.querySelectorAll('.carousel-dot');
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
+
+        function updateCarousel() {
+            const translateX = -currentSlide * 100;
+            carouselTrack.style.transform = `translateX(${translateX}%)`;
+            
+            // Update dots
+            dots.forEach((dot, index) => {
+                if (index === currentSlide) {
+                    dot.classList.add('active');
+                } else {
+                    dot.classList.remove('active');
+                }
+            });
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            updateCarousel();
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+            updateCarousel();
+        }
+
+        // Event listeners
+        nextBtn.addEventListener('click', nextSlide);
+        prevBtn.addEventListener('click', prevSlide);
+
+        // Dot navigation
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                currentSlide = index;
+                updateCarousel();
+            });
+        });
+    </script>
 </body>
 </html>

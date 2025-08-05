@@ -18,23 +18,41 @@
 }
 
 @layer base {
+    /* Smooth scrolling and offset for fixed nav */
+    html {
+        scroll-behavior: smooth;
+    }
+    
+    /* Offset sections to account for fixed nav height */
+    section {
+        scroll-margin-top: 4rem;
+    }
+
     h1 {
         @apply text-4xl font-mono font-medium text-primary;
     }
     h2 {
         @apply text-3xl font-mono font-medium text-primary;
     }
+    h3 {
+        @apply text-2xl font-mono font-medium text-primary;
+    }
     h4 {
         @apply text-xl font-mono font-medium text-primary;
     }
     p {
-        @apply text-lg font-mono text-primary;
+        @apply text-lg font-mono text-primary leading-normal;
     }
     a {
         @apply font-mono text-primary;
     }
     li {
         @apply font-mono text-primary;
+    }
+
+    /* Text selection styling */
+    ::selection {
+        @apply bg-secondary text-primary;
     }
 }
 
@@ -56,7 +74,7 @@
 
     /* Individual buttons - remove flex-1 and flex-row */
     nav button {
-        @apply px-3 py-2 hover:text-violet-400 text-neutral-800;
+        @apply px-3 py-2 hover:text-secondary text-neutral-800;
     }
 
     /* Center section - logo (this will stay perfectly centered) */
@@ -70,11 +88,11 @@
     }
 
     nav .logo a {
-        @apply text-2xl font-mono hover:text-violet-400 text-primary;
+        @apply text-2xl font-mono hover:text-secondary text-primary;
     }
 
     nav ul a {
-        @apply font-mono hover:text-violet-400 text-primary px-2 py-2;
+        @apply font-mono hover:text-secondary text-primary px-2 py-2;
     }
     
     /* Main content area */
@@ -82,9 +100,30 @@
         @apply min-h-screen overflow-y-auto;
     }
 
-    /* Skills section */
-    #skills ul {
-        @apply list-disc;
+    /* Carousel Controls */
+    .carousel-btn {
+        @apply bg-primary text-neutral p-2 rounded-full hover:bg-secondary transition-colors;
+    }
+
+    .carousel-dot {
+        @apply w-3 h-3 rounded-full transition-colors;
+    }
+
+    .carousel-dot.active {
+        @apply bg-primary;
+    }
+
+    .carousel-dot:not(.active) {
+        @apply bg-gray-300 hover:bg-primary;
+    }
+
+    /* Project Buttons */
+    .btn-primary {
+        @apply px-4 py-2 bg-primary text-neutral rounded hover:bg-secondary transition-colors;
+    }
+
+    .btn-secondary {
+        @apply px-4 py-2 border border-primary text-primary rounded hover:border-secondary hover:text-secondary transition-colors;
     }
 }
 
