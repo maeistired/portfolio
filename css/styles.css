@@ -4,19 +4,16 @@
 @theme {
     --color-jet: #39373C;
     --color-olivia: #EBC6BE;
-    --color-platinum: #E2E3DD;
     --color-ghost: #EBEAEF;
 
     /* Light mode colors */
     --color-primary: #39373C;
     --color-secondary: #EBC6BE;
-    --color-accent: #E2E3DD;
     --color-neutral: #EBEAEF;
 
     /* Dark mode colors */
     --color-primary-dark: #EBEAEF;
     --color-secondary-dark: #EBC6BE;
-    --color-accent-dark: #E2E3DD;
     --color-neutral-dark: #39373C;
 
     /* Define font families */
@@ -135,6 +132,7 @@
     nav {
         @apply fixed top-0 left-0 right-0 h-16 z-20 border-b px-4 flex items-center;
         background-color: var(--current-neutral);
+        border-color: var(--current-primary);
         transition: background-color 0.3s ease, border-color 0.3s ease;
     }
 
@@ -212,7 +210,9 @@
     }
 
     .carousel-dot:not(.active) {
-        background-color: var(--current-accent);
+        background-color: transparent;
+        box-shadow: inset 0 0 0 1px var(--current-primary);
+        transition: all 0.3s ease;
     }
 
     .carousel-dot:not(.active):hover {
@@ -252,6 +252,12 @@
         background-color: var(--current-secondary);
     }
 
+    /* Skills Icons - no hover effect */
+    .skills-icon {
+        background-color: var(--current-primary);
+        color: var(--current-neutral);
+    }
+
     .contact-link {
         @apply transition-colors duration-300;
         color: var(--current-primary);
@@ -260,10 +266,37 @@
     .contact-link:hover {
         color: var(--current-secondary);
     }
+
+    /* Make entire contact block hover together */
+    .contact-link:hover .contact-icon {
+        background-color: var(--current-secondary);
+    }
+
+    .contact-link:hover h4,
+    .contact-link:hover span {
+        color: var(--current-secondary);
+    }
+
+    /* About section - make image and text equal height */
+    #about .grid {
+        align-items: stretch;
+    }
+
+    #about .grid > div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #about img {
+        height: 100%;
+        width: 100%;
+        max-width: 28rem;
+        object-fit: cover;
+    }
 }
 
 @layer utilities {
     .content-wrapper {
-        @apply max-w-[1152px] mx-auto;
+        @apply relative max-w-5xl mx-auto;
     }
 }
