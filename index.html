@@ -9,6 +9,7 @@
 <body>
     <!-- T Navigation Bar -->
     <nav>
+        <!-- Dark Mode Toggle -->
         <div class="">
             <button id="dark-mode-toggle" class="dark-mode-toggle">
                 <svg id="toggle-icon" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -17,15 +18,56 @@
                 </svg>
             </button>
         </div>
-        <div class="logo">
+
+        <!-- Logo -->
+        <div class="logo mx-auto">
             <a href="#home">mae cacao</a>
         </div> 
-        <ul>
-            <li><a href="#about">about</a></li>
-            <li><a href="#skills">skills</a></li>
-            <li><a href="#projects">projects</a></li>
-            <li><a href="#contact">contact</a></li>
-        </ul>
+        
+        <!-- Navigation Links -->
+        <div id="primary-nav" class="hidden md:flex">
+            <ul>
+                <li><a href="#about">about</a></li>
+                <li><a href="#skills">skills</a></li>
+                <li><a href="#projects">projects</a></li>
+                <li><a href="#contact">contact</a></li>
+            </ul>
+        </div>
+
+        <!-- Burger Button-->
+         <button id="burger" class="md:hidden" aria-controls="mobile-nav" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+
+            <!-- Hamburger icon -->
+            <svg id="burger-icon" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M3.75 6.75h16.5" />
+                <path d="M3.75 12h16.5" />
+                <path d="M3.75 17.25h16.5" />
+            </svg>
+         </button>
+
+        <!--Mobile Navigation Links-->      
+        <div id="mobile-nav" class="hidden fixed top-0 left-0 w-full h-full bg-[var(--current-neutral)] z-50">
+            <!-- Close Button inside mobile menu -->
+            <div class="flex justify-end p-3">
+                <button id="close" class="p-2" aria-label="Close menu">
+                    <svg id="close-icon" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+            
+            <!-- Navigation Links -->
+            <ul class="flex flex-col items-center justify-start space-y-8 text-xl text-center">
+                <li><a href="#home">home</a></li>
+                <li><a href="#about">about</a></li>
+                <li><a href="#skills">skills</a></li>
+                <li><a href="#projects">projects</a></li>
+                <li><a href="#contact">contact</a></li>
+            </ul>
+        </div>
     </nav>
 
     <!-- Main Content -->
@@ -280,8 +322,9 @@
         <p>© 2025 mae cacao. All rights reserved.</p>
     </footer>
 
-    <!-- Carousel JavaScript -->
+    <!-- Carousel -->
     <script>
+        // Carousel
         let currentSlide = 0;
         const totalSlides = 3;
         const carouselTrack = document.getElementById('carousel-track');
@@ -353,6 +396,45 @@
                 localStorage.setItem('theme', 'light');
             }
         });
+    </script>
+
+    <!-- Burger Menu -->
+    <script>
+    const burger = document.getElementById('burger');
+    const mobileNav = document.getElementById('mobile-nav');
+    const closeButton = document.getElementById('close');
+
+    console.log('Burger button:', burger);
+    console.log('Mobile nav:', mobileNav);
+    console.log('Close button:', closeButton);
+
+    // Open mobile menu when burger is clicked
+    burger.addEventListener('click', () => {
+        console.log('Burger clicked!');
+        mobileNav.classList.remove('hidden');
+        mobileNav.classList.add('flex', 'flex-col');
+        burger.setAttribute('aria-expanded', 'true');
+        console.log('Menu opened');
+    });
+
+    // Close mobile menu when close button is clicked
+    closeButton.addEventListener('click', () => {
+        console.log('Close button clicked!');
+        mobileNav.classList.add('hidden');
+        mobileNav.classList.remove('flex', 'flex-col');
+        burger.setAttribute('aria-expanded', 'false');
+        console.log('Menu closed');
+    });
+
+    // Close menu when a navigation link is clicked
+    mobileNav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            console.log('Menu link clicked, closing menu');
+            mobileNav.classList.add('hidden');
+            mobileNav.classList.remove('flex', 'flex-col');
+            burger.setAttribute('aria-expanded', 'false');
+        });
+    });
     </script>
 </body>
 </html>
