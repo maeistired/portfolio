@@ -161,6 +161,28 @@
         color: var(--current-neutral);
     }
 
+    /* Burger and Close buttons */
+    #burger, #close {
+        @apply p-2 rounded-md transition-all duration-300 flex items-center justify-center ring-1;
+        background-color: transparent;
+        color: var(--current-primary);
+        border-color: var(--current-primary);
+        ring-color: var(--current-primary);
+        width: 36px;
+        height: 36px;
+    }
+
+    #burger:hover, #close:hover {
+        background-color: var(--current-primary);
+        color: var(--current-neutral);
+    }
+
+    #burger:focus, #close:focus {
+        outline: none;
+        background-color: var(--current-primary);
+        color: var(--current-neutral);
+    }
+
     /* Center section - logo */
     nav .logo {
         @apply flex-1 flex justify-center items-center;
@@ -171,12 +193,18 @@
         @apply flex-1 flex justify-end items-center space-x-4 list-none m-0 p-0;
     }
 
-    nav .logo a {
+    #logo {
         @apply text-2xl font-mono transition-colors duration-300;
         color: var(--current-primary);
     }
 
-    nav .logo a:hover {
+    #logo a {
+        @apply transition-colors duration-300;
+        color: var(--current-primary);
+        text-decoration: none;
+    }
+
+    #logo a:hover {
         color: var(--current-secondary);
     }
 
@@ -190,7 +218,7 @@
     }
     
     /* Mobile navigation */
-    
+
     /* Main content area */
     main {
         @apply min-h-screen overflow-y-auto;

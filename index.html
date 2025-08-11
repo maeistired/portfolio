@@ -8,9 +8,9 @@
 </head>
 <body>
     <!-- T Navigation Bar -->
-    <nav>
-        <!-- Dark Mode Toggle -->
-        <div class="">
+    <nav class="flex items-center justify-between px-4 py-3">
+        <!-- Left side - Dark Mode Toggle -->
+        <div class="flex items-center">
             <button id="dark-mode-toggle" class="dark-mode-toggle">
                 <svg id="toggle-icon" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                     <!-- Moon icon (default/light mode) -->
@@ -19,33 +19,35 @@
             </button>
         </div>
 
-        <!-- Logo -->
-        <div class="logo mx-auto">
-            <a href="#home">mae cacao</a>
+        <!-- Center - Logo (always centered) -->
+        <div id="logo" class="absolute left-1/2 transform -translate-x-1/2">
+            <a href="#home" class="logo">mae cacao</a>
         </div> 
         
-        <!-- Navigation Links -->
-        <div id="primary-nav" class="hidden md:flex">
-            <ul>
-                <li><a href="#about">about</a></li>
-                <li><a href="#skills">skills</a></li>
-                <li><a href="#projects">projects</a></li>
-                <li><a href="#contact">contact</a></li>
-            </ul>
+        <!-- Right side - Navigation Links and Burger -->
+        <div class="flex items-center space-x-4">
+            <!-- Desktop Navigation Links -->
+            <div id="primary-nav" class="hidden md:flex">
+                <ul class="flex items-center space-x-6">
+                    <li><a href="#about">about</a></li>
+                    <li><a href="#skills">skills</a></li>
+                    <li><a href="#projects">projects</a></li>
+                    <li><a href="#contact">contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Mobile Burger Button -->
+            <button id="burger" class="md:hidden" aria-controls="mobile-nav" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <!-- Hamburger icon -->
+                <svg id="burger-icon" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M3.75 6.75h16.5" />
+                    <path d="M3.75 12h16.5" />
+                    <path d="M3.75 17.25h16.5" />
+                </svg>
+            </button>
         </div>
-
-        <!-- Burger Button-->
-         <button id="burger" class="md:hidden" aria-controls="mobile-nav" aria-expanded="false">
-            <span class="sr-only">Toggle navigation</span>
-
-            <!-- Hamburger icon -->
-            <svg id="burger-icon" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M3.75 6.75h16.5" />
-                <path d="M3.75 12h16.5" />
-                <path d="M3.75 17.25h16.5" />
-            </svg>
-         </button>
 
         <!--Mobile Navigation Links-->      
         <div id="mobile-nav" class="hidden fixed top-0 left-0 w-full h-full bg-[var(--current-neutral)] z-50">
