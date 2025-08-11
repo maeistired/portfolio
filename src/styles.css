@@ -297,6 +297,6 @@
 
 @layer utilities {
     .content-wrapper {
-        @apply relative max-w-5xl mx-auto;
+        @apply mx-auto max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-4xl;
     }
 }
