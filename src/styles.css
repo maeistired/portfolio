@@ -224,6 +224,33 @@
         @apply min-h-screen overflow-y-auto;
     }
 
+    /* Home Hero Animations */
+    #home-hero-text {
+        @apply inline-block overflow-hidden whitespace-nowrap;
+        border-right: 3px solid var(--current-primary);
+        width: 0;
+        animation:
+            typing 2s steps(7, end) forwards,
+            cursor 0.4s step-end infinite alternate;
+    }
+
+    /* cursor blinking */
+    @keyframes cursor {
+        50% {
+            border-color: transparent;
+        }
+    }
+
+    /* typing effect */
+    @keyframes typing {
+        from {
+            width: 0;
+        }
+        to {
+            width: 7.2ch;
+        }
+    }
+    
     /* Carousel Controls */
     .carousel-btn {
         @apply p-2 rounded-full transition-all duration-300;
