@@ -7,8 +7,6 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-neutral-900: oklch(20.5% 0 0);
-    --color-white: #fff;
     --spacing: 0.25rem;
     --container-xs: 20rem;
     --container-sm: 24rem;
@@ -489,16 +487,6 @@
       margin-top: auto;
     }
   }
-  .md\:flex {
-    @media (width >= 48rem) {
-      display: flex;
-    }
-  }
-  .md\:hidden {
-    @media (width >= 48rem) {
-      display: none;
-    }
-  }
   .md\:h-\[150px\] {
     @media (width >= 48rem) {
       height: 150px;
@@ -541,6 +529,21 @@
         margin-inline-start: calc(calc(var(--spacing) * 4) * var(--tw-space-x-reverse));
         margin-inline-end: calc(calc(var(--spacing) * 4) * calc(1 - var(--tw-space-x-reverse)));
       }
+    }
+  }
+  .md\:text-left {
+    @media (width >= 48rem) {
+      text-align: left;
+    }
+  }
+  .lg\:flex {
+    @media (width >= 64rem) {
+      display: flex;
+    }
+  }
+  .lg\:hidden {
+    @media (width >= 64rem) {
+      display: none;
     }
   }
   .lg\:grid-cols-2 {
@@ -676,18 +679,6 @@
     align-items: center;
     justify-content: flex-start;
   }
-  #mobile-nav {
-    position: fixed;
-    top: calc(var(--spacing) * 0);
-    left: calc(var(--spacing) * 0);
-    z-index: 50;
-    height: 100%;
-    width: 100%;
-    background-color: var(--color-white);
-    @media (prefers-color-scheme: dark) {
-      background-color: var(--color-neutral-900);
-    }
-  }
   .dark-mode-toggle {
     display: flex;
     align-items: center;
@@ -808,7 +799,7 @@
     white-space: nowrap;
     border-right: 3px solid var(--current-primary);
     width: 0;
-    animation: typing 2s steps(7, end) forwards, cursor 0.4s step-end infinite alternate;
+    animation: typing 1.7s steps(7, end) forwards, cursor 0.4s step-end infinite alternate;
   }
   @keyframes cursor {
     50% {

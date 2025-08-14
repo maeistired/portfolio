@@ -141,10 +141,6 @@
         @apply flex-1 flex justify-start items-center;
     }
 
-    #mobile-nav {
-        @apply fixed top-0 left-0 w-full h-full bg-white dark:bg-neutral-900 z-50;
-    }
-
     /* Dark mode toggle button */
     .dark-mode-toggle {
         @apply p-2 rounded-md transition-all duration-300 flex items-center justify-center ring-1;
@@ -216,8 +212,6 @@
     nav ul a:hover {
         color: var(--current-secondary);
     }
-    
-    /* Mobile navigation */
 
     /* Main content area */
     main {
@@ -230,7 +224,7 @@
         border-right: 3px solid var(--current-primary);
         width: 0;
         animation:
-            typing 2s steps(7, end) forwards,
+            typing 1.7s steps(7, end) forwards,
             cursor 0.4s step-end infinite alternate;
     }
 

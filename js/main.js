@@ -11,7 +11,6 @@ document.addEventListener('DOMContentLoaded', () => {
     initializeCarousel();
     initializeDarkMode();
     initializeBurgerMenu();
-    initializeTypewriter();
 });
 
 // =============================================================================
@@ -151,6 +150,11 @@ function initializeBurgerMenu() {
         });
     });
 }
+
+// =============================================================================
+// TYPEWRITER EFFECT
+// =============================================================================
+
 
 // =============================================================================
 // UTILITY FUNCTIONS
