@@ -327,6 +327,57 @@
         <p>© 2025 mae cacao. All rights reserved.</p>
     </footer>
 
+    <!-- Portfolio Version Notice -->
+    <div id="version-notice" class="version-notice" role="dialog" aria-modal="true" aria-labelledby="version-notice-title" aria-describedby="version-notice-desc" hidden>
+        <div class="version-notice-card">
+            <!-- Header -->
+            <div class="version-notice-header">
+                <span class="version-notice-status">
+                    <span class="version-notice-dot" aria-hidden="true"></span>
+                    redesign in progress
+                </span>
+                <button id="version-notice-close" class="version-notice-close" aria-label="Close notice">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Body -->
+            <div class="version-notice-body">
+                <h3 id="version-notice-title">A new portfolio is on the way</h3>
+                <p id="version-notice-desc">
+                    You're currently viewing a previous version of my portfolio. I'm building a
+                    refreshed site that better reflects my most recent work and growth as a designer
+                    and developer.
+                </p>
+
+                <ul class="version-notice-list">
+                    <li>Updated case studies and recent projects</li>
+                    <li>Expanded design and development process</li>
+                    <li>Refined visual identity and layout</li>
+                </ul>
+
+                <!-- Timeline -->
+                <div class="version-notice-timeline">
+                    <div class="flex items-center justify-between">
+                        <span class="version-notice-label">expected completion</span>
+                        <span class="version-notice-date">December 2026</span>
+                    </div>
+                    <div class="version-notice-progress" aria-hidden="true">
+                        <div class="version-notice-progress-bar"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <div class="version-notice-footer">
+                <a href="#contact" id="version-notice-contact" class="btn-secondary font-mono">get in touch</a>
+                <button id="version-notice-ok" class="btn-primary font-mono">continue browsing</button>
+            </div>
+        </div>
+    </div>
+
     <!-- Main JavaScript File -->
     <script src="js/main.js"></script>
 </body>

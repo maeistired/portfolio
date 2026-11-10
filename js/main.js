@@ -11,7 +11,70 @@ document.addEventListener('DOMContentLoaded', () => {
     initializeCarousel();
     initializeDarkMode();
     initializeBurgerMenu();
+    initializeVersionNotice();
 });
+
+// =============================================================================
+// PORTFOLIO VERSION NOTICE
+// Shows once per browser session after the user scrolls past the hero section
+// =============================================================================
+function initializeVersionNotice() {
+    const notice = document.getElementById('version-notice');
+    const hero = document.getElementById('home');
+    const closeBtn = document.getElementById('version-notice-close');
+    const okBtn = document.getElementById('version-notice-ok');
+    const contactLink = document.getElementById('version-notice-contact');
+    const STORAGE_KEY = 'versionNoticeSeen';
+
+    if (!notice || !hero || !closeBtn || !okBtn) {
+        console.warn('Version notice elements not found');
+        return;
+    }
+
+    if (sessionStorage.getItem(STORAGE_KEY)) return;
+
+    let lastFocused = null;
+
+    function showNotice() {
+        sessionStorage.setItem(STORAGE_KEY, 'true');
+        lastFocused = document.activeElement;
+        notice.hidden = false;
+        // Allow display change to apply before triggering the fade-in
+        requestAnimationFrame(() => notice.classList.add('is-visible'));
+        okBtn.focus();
+        document.addEventListener('keydown', onKeydown);
+    }
+
+    function hideNotice() {
+        notice.classList.remove('is-visible');
+        document.removeEventListener('keydown', onKeydown);
+        setTimeout(() => { notice.hidden = true; }, 300);
+        if (lastFocused) lastFocused.focus({ preventScroll: true });
+    }
+
+    function onKeydown(e) {
+        if (e.key === 'Escape') hideNotice();
+    }
+
+    closeBtn.addEventListener('click', hideNotice);
+    okBtn.addEventListener('click', hideNotice);
+    if (contactLink) contactLink.addEventListener('click', hideNotice);
+    notice.addEventListener('click', (e) => {
+        if (e.target === notice) hideNotice();
+    });
+
+    // Trigger once the hero is mostly out of view (scroll or nav link jump)
+    const observer = new IntersectionObserver((entries) => {
+        const entry = entries[0];
+        const pastHero = !entry.isIntersecting || entry.intersectionRatio < 0.5;
+        if (pastHero && entry.boundingClientRect.top < 0) {
+            observer.disconnect();
+            showNotice();
+        }
+    }, { threshold: [0, 0.5] });
+
+    observer.observe(hero);
+}
 
 // =============================================================================
 // CAROUSEL FUNCTIONALITY
