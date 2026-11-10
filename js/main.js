@@ -12,7 +12,16 @@ document.addEventListener('DOMContentLoaded', () => {
     initializeDarkMode();
     initializeBurgerMenu();
     initializeVersionNotice();
+    updateFooterYear();
 });
+
+// =============================================================================
+// FOOTER YEAR
+// =============================================================================
+function updateFooterYear() {
+    const year = document.getElementById('footer-year');
+    if (year) year.textContent = new Date().getFullYear();
+}
 
 // =============================================================================
 // PORTFOLIO VERSION NOTICE
@@ -187,26 +196,21 @@ function initializeBurgerMenu() {
 
     // Open mobile menu when burger is clicked
     burger.addEventListener('click', () => {
-        console.log('Burger clicked!');
         mobileNav.classList.remove('hidden');
         mobileNav.classList.add('flex', 'flex-col');
         burger.setAttribute('aria-expanded', 'true');
-        console.log('Menu opened');
     });
 
     // Close mobile menu when close button is clicked
     closeButton.addEventListener('click', () => {
-        console.log('Close button clicked!');
         mobileNav.classList.add('hidden');
         mobileNav.classList.remove('flex', 'flex-col');
         burger.setAttribute('aria-expanded', 'false');
-        console.log('Menu closed');
     });
 
     // Close menu when a navigation link is clicked
     mobileNav.querySelectorAll('a').forEach(link => {
         link.addEventListener('click', () => {
-            console.log('Menu link clicked, closing menu');
             mobileNav.classList.add('hidden');
             mobileNav.classList.remove('flex', 'flex-col');
             burger.setAttribute('aria-expanded', 'false');
@@ -239,8 +243,3 @@ function scrollToSection(targetId) {
         });
     }
 }
-
-/**
- * Log initialization status
- */
-console.log('Portfolio JavaScript initialized successfully');
